@@ -5,8 +5,11 @@ Werkzeug Documentation:  https://werkzeug.palletsprojects.com/
 This file creates your application.
 """
 
+from datetime import datetime
+from wsgiref.handlers import format_date_time
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+import time
 
 
 ###
@@ -18,6 +21,10 @@ def home():
     """Render website's home page."""
     return render_template('home.html')
 
+@app.route('/profile')
+def profile():
+    """Render fake profile page."""
+    return render_template('profile.html', datetime = formate_date_joined())
 
 @app.route('/about/')
 def about():
@@ -28,6 +35,10 @@ def about():
 ###
 # The functions below should be applicable to all Flask apps.
 ###
+def formate_date_joined():
+    """format date"""
+    datetime = time.strftime("%b, %Y")
+    return datetime
 
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):

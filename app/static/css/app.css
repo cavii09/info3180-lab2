@@ -1,3 +1,46 @@
 body {
     padding-top: 5rem;
 }
+.head{
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 12px;
+    text-align: center;
+    height: 50%;
+    width: 50%;
+    padding: 2em;
+}
+div.head{
+    color: white;
+}
+
+p{
+    color: gray;
+}
+.center{
+    text-align: center;
+}
+
+.main{
+    border: 1px solid black;
+    border-radius: 12px;
+    text-align: center;
+    height: 50%;
+    width: 50%;
+    padding: 2em;
+}
+
+
+img {
+    border-radius: 50%;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+}
+button {
+    border-radius: 25%;
+    padding: 10px;
+    margin: 12px 6px;
+    text-align: center;
+    background-color: #BFFF00;
+}
